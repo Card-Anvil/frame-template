@@ -13,6 +13,7 @@
     "new-frame": "node scripts/new-frame.js",
     "validate": "frame-kit validate",
     "build": "frame-kit build --out dist",
+    "watch": "frame-kit build --out dist --watch",
     "typecheck": "tsc -b",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",

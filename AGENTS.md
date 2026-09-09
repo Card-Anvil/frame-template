@@ -52,6 +52,18 @@ into layout maths and documentation.
   purpose: every frame here is released together under the repository's version.
 - Relative imports are extensionless, matching the frame packages upstream.
 
+## Previewing in Card Anvil
+
+`pnpm validate` checks structure; only the app shows pixels. `pnpm build` writes a `.cardframe` per
+frame to `dist/`, which installs by dragging it onto the web or desktop app. For an edit loop, run
+`pnpm watch` and link `dist/` from the desktop app (**Settings → Frames → Frame folder**), which
+repacks into it on every save.
+
+A linked folder is not an install — nothing is copied, and unlinking removes the frames from the
+app. A failed rebuild leaves the previous bundle in place rather than dropping the frame, and an
+edit that does not change the built output produces an identical bundle, so the app correctly does
+nothing.
+
 ## Adding a frame
 
 Use `pnpm new-frame` rather than copying by hand — it derives the export name, the id and the

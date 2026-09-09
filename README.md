@@ -99,6 +99,53 @@ Common messages:
 | `ship its own art`           | An asset points at a URL. A frame has to carry its own images          |
 | `Invalid option` on a colour | A barrel exports a key that is not a frame colour                      |
 
+## See it in Card Anvil
+
+`pnpm validate` proves your frame is well formed. It cannot tell you whether it looks right — for
+that, put it in the app.
+
+### Once, to look at it
+
+```bash
+pnpm build
+```
+
+That writes a `.cardframe` file per frame into `dist/`. **Drag one onto Card Anvil** — the web app or
+the desktop app, either works — and it installs. Your frame then appears in the frame picker beside
+the built-in ones, and stays there until you remove it.
+
+### While you work on it
+
+The desktop app can watch a folder instead, so a save shows up without reinstalling anything.
+
+1. Leave a build running:
+
+   ```bash
+   pnpm watch
+   ```
+
+2. In Card Anvil: **Settings → Frames → Frame folder**, and choose this repository's `dist/` folder —
+   the one `pnpm watch` is writing into.
+
+Now every save repacks the frames that changed, and the app picks them up. Edit a coordinate, watch
+the box move.
+
+(If you would rather keep the app pointed somewhere tidier, build into it instead:
+`pnpm exec frame-kit build --watch --out "<that folder>"`.)
+
+A few things worth knowing:
+
+- **A broken save keeps the last good frame.** If the build fails, the previous bundle stays in
+  place and the error prints in your terminal — you do not lose the frame mid-edit.
+- **A save that changes nothing does nothing.** Bundles are byte-for-byte deterministic, so
+  reformatting a file or saving without an edit produces an identical bundle and the app has no
+  reason to redraw.
+- **A linked folder is not an install.** Nothing is copied. Stop the watch and unlink the folder and
+  the frames are simply gone from the app — which is what you want while iterating, and not what you
+  want for a frame you actually use.
+- **Web browsers cannot watch a folder**, so this loop is desktop-only. Dragging a `.cardframe` in
+  works everywhere.
+
 ## Publish
 
 **Actions → Release frames → Run workflow → pick `patch`, `minor` or `major` → Run.**
@@ -149,5 +196,6 @@ ones.
 | `pnpm new-frame`            | Scaffold a new frame          |
 | `pnpm validate`             | Check every frame             |
 | `pnpm build`                | Pack every frame into `dist/` |
+| `pnpm watch`                | Repack into `dist/` on save   |
 | `pnpm typecheck`            | Type-check                    |
 | `pnpm lint` / `pnpm format` | Tidy the code                 |
