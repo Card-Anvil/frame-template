@@ -209,10 +209,11 @@ async function main() {
         ),
     );
 
+    const shown = target.split(path.sep).join("/");
     console.log(`
-Created ${target}
+Created ${shown}
 
-  1. Replace the art in ${target}/base/ with your own.
+  1. Replace the art in ${shown}/base/ with your own.
   2. pnpm validate
   3. Commit, then Actions -> Release frames -> Run workflow.
 `);
