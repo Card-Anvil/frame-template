@@ -1,0 +1,7 @@
+# Not a workspace: every frame lives in the one root package, so there is a
+# single node_modules, a single install, and nothing to re-install after adding
+# a frame. This file exists to approve esbuild's postinstall, which Vite needs.
+allowBuilds:
+  esbuild: true
+minimumReleaseAgeExclude:
+  - "@cardanvil/frame-kit@0.2.0"
