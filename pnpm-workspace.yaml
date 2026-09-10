@@ -3,5 +3,8 @@
 # a frame. This file exists to approve esbuild's postinstall, which Vite needs.
 allowBuilds:
   esbuild: true
+# Every version of the frame contract, rather than a list that has to be
+# edited on each release. It is the package this repository exists to use, and
+# it comes from the same place this template does.
 minimumReleaseAgeExclude:
-  - "@cardanvil/frame-kit@0.2.0"
+  - "@cardanvil/frame-kit"
