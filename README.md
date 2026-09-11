@@ -13,7 +13,9 @@ that get drawn. Nothing in a frame runs — which is exactly why a frame can be 
 that never compiled it.
 
 This repository already contains one working frame, so you can replace one piece at a time and
-check your work after each change rather than starting from nothing.
+check your work after each change rather than starting from nothing. That frame is marked
+`"private": true`, which means it is checked on every run but never packed and never published —
+it is there to be read and copied, not shipped.
 
 ## Start in your browser
 
@@ -38,7 +40,8 @@ Answer four questions and you get a folder under `frames/` that already works. T
 images in `frames/<your-frame>/base/` with your own art, one at a time, running `pnpm validate`
 as you go.
 
-Delete `frames/example` once you no longer need it.
+`pnpm new-frame` copies `frames/example`, so leave it where it is — it costs you nothing, since a
+private frame never reaches a release. The frame it makes for you is not private; that one ships.
 
 ## The coordinate space
 
@@ -109,9 +112,10 @@ that, put it in the app.
 pnpm build
 ```
 
-That writes a `.cardframe` file per frame into `dist/`. **Drag one onto Card Anvil** — the web app or
-the desktop app, either works — and it installs. Your frame then appears in the frame picker beside
-the built-in ones, and stays there until you remove it.
+That writes a `.cardframe` file per frame into `dist/` — every frame except the private example.
+**Drag one onto Card Anvil** — the web app or the desktop app, either works — and it installs. Your
+frame then appears in the frame picker beside the built-in ones, and stays there until you remove
+it.
 
 ### While you work on it
 
