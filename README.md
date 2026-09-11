@@ -1,7 +1,6 @@
 # Card Anvil frames
 
-A starting point for building and publishing your own [Card Anvil](https://github.com/Card-Anvil)
-card frames.
+A starting point for building and publishing your own [Card Anvil](https://cardanvil.com) card frames.
 
 Click **Use this template** to make your own copy, then follow along below.
 
