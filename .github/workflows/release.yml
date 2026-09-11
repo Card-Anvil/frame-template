@@ -19,6 +19,17 @@ on:
         required: false
         type: string
 
+  # GitHub does not list a workflow under Actions until something has run it or
+  # a push has touched its file, and a dispatch-only workflow never runs on its
+  # own. In a repository made from this template that hid "Run workflow" from
+  # the one person who needs it, on their first day. The commit that creates
+  # the repository contains this file, so this trigger registers the workflow
+  # there and then. It releases nothing: the job below runs only when a human
+  # presses Run.
+  push:
+    paths:
+      - .github/workflows/release.yml
+
 permissions:
   contents: write
 
@@ -28,6 +39,8 @@ concurrency:
 
 jobs:
   release:
+    # The registration push above must never publish anything.
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
