@@ -162,6 +162,13 @@ You get a release containing a `.cardframe` file per frame, a preview image for 
 > If your default branch is protected, the release cannot push its version commit. Either leave
 > `main` unprotected or allow `github-actions[bot]` to bypass the rules.
 
+> **No "Release frames" in the Actions list?** GitHub only lists a workflow once something has run
+> it or a push has touched its file, and a repository made from a template can land in that gap.
+> This template registers the workflow on the commit that creates your repository, but a copy made
+> before that was added will not have it. Any push that changes
+> `.github/workflows/release.yml` fixes it permanently — an edit, a rename, or merging one of
+> Dependabot's action bumps.
+
 ## Share it
 
 Give people this link — it always points at your newest release:
