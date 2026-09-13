@@ -1,0 +1,10 @@
+{
+  "$schema": "../../node_modules/@cardanvil/frame-kit/schema/frame-meta.schema.json",
+  "id": "com.github.card-anvil.dragon-hoard",
+  "entry": "./index.ts",
+  "export": "dragonHoardFrame",
+  "author": {
+    "name": "AModSoul"
+  },
+  "license": "CC-BY-4.0"
+}
