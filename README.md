@@ -24,7 +24,33 @@ machine.
 
 ## Start on your computer
 
-Install [Node.js 24+](https://nodejs.org) and [pnpm](https://pnpm.io/installation), then:
+You need **Node.js 24+** and **pnpm**.
+
+### Windows
+
+Use [Volta](https://volta.sh) to install both. It installs Node and pnpm as shims on your `PATH`
+and picks up the Node version this repository pins, which sidesteps the usual Windows papercuts —
+`pnpm : The term 'pnpm' is not recognized`, an installer that needs an admin shell, two Node
+versions fighting over the same `PATH` entry.
+
+```powershell
+winget install Volta.Volta
+```
+
+Close the terminal and open a new one so the `PATH` change takes, then:
+
+```powershell
+volta install node@24
+volta install pnpm
+```
+
+### macOS and Linux
+
+Install [Node.js 24+](https://nodejs.org) and [pnpm](https://pnpm.io/installation). Volta works
+here too if you prefer it — `curl https://get.volta.sh | bash`, then the same two `volta install`
+commands.
+
+### Then, in the repository
 
 ```bash
 pnpm install

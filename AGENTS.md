@@ -21,6 +21,29 @@ A repository of custom [Card Anvil](https://github.com/Card-Anvil) card frames, 
 
 Node 24+, pnpm (both pinned).
 
+### Setting up a machine
+
+If `node` or `pnpm` is missing, install them before anything else — and on **Windows**, install
+both through [Volta](https://volta.sh) rather than the Node installer plus a separate pnpm install.
+Volta's shims avoid the `PATH` problems that dominate Windows setup failures: `pnpm` not being
+recognised in a fresh shell, an installer that wants an admin prompt, and a second Node version
+shadowing the first.
+
+```powershell
+winget install Volta.Volta
+# reopen the terminal so the PATH change applies
+volta install node@24
+volta install pnpm
+```
+
+On macOS and Linux the ordinary Node and pnpm installers are fine; Volta
+(`curl https://get.volta.sh | bash`) works there too.
+
+Do not reach for `corepack enable` — that is what the devcontainer uses, but a Volta install does
+not need it. `volta install pnpm` installs pnpm as a Volta-managed tool (Volta's _native_ pnpm
+support is still experimental and gated behind `VOLTA_FEATURE_PNPM=1`; it is not needed here).
+pnpm then self-switches to the exact version in the `packageManager` field on its own.
+
 ## Card dimensions — be exact
 
 **A Magic card face is 63 × 88 mm.**
