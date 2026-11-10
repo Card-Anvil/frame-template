@@ -3,3 +3,6 @@ dist/
 *.tsbuildinfo
 *.tgz
 .DS_Store
+
+# Personal editor settings; .vscode/extensions.json is shared and stays tracked.
+.vscode/settings.json
