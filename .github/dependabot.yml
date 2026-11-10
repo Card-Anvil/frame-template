@@ -3,12 +3,19 @@ updates:
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: weekly
+      interval: daily
     # One pull request rather than a dozen; the interesting one is
     # @cardanvil/frame-kit, and it should arrive without hunting for it.
+    # Majors arrive on their own: one that frame-kit's peer range does not
+    # allow yet (TypeScript, say) would otherwise hold the whole group hostage.
     groups:
       all:
         patterns: ["*"]
+        update-types: [minor, patch]
+    ignore:
+      # Tracks the Node major in `engines`, not the newest Node.
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: github-actions
     directory: /
