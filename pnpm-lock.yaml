@@ -168,14 +168,14 @@ importers:
     dependencies:
       '@cardanvil/frame-kit':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@6.0.3)(vite@8.3.7(@types/node@24.19.2)(yaml@2.9.1))(zod@4.6.7)
+        version: 0.7.0(typescript@6.0.3)(vite@8.3.8(@types/node@24.19.2)(yaml@2.9.1))(zod@4.6.7)
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.14.0)
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^6.0.2
-        version: 6.0.2(prettier@3.9.10)
+        version: 6.0.2(prettier@3.10.1)
       '@types/node':
         specifier: ^24.19.2
         version: 24.19.2
@@ -195,8 +195,8 @@ importers:
         specifier: ^17.6.0
         version: 17.6.0
       prettier:
-        specifier: ^3.9.10
-        version: 3.9.10
+        specifier: ^3.10.1
+        version: 3.10.1
       typescript:
         specifier: ~6.0.3
         version: 6.0.3
@@ -204,8 +204,8 @@ importers:
         specifier: ^8.72.2
         version: 8.72.2(eslint@10.14.0)(typescript@6.0.3)
       vite:
-        specifier: ^8.3.7
-        version: 8.3.7(@types/node@24.19.2)(yaml@2.9.1)
+        specifier: ^8.3.8
+        version: 8.3.8(@types/node@24.19.2)(yaml@2.9.1)
       zod:
         specifier: ^4.6.7
         version: 4.6.7
@@ -904,8 +904,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier@3.9.10:
-    resolution: {integrity: sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA==}
+  prettier@3.10.1:
+    resolution: {integrity: sha512-70vp3ZUYoPlFbF9uiTdXHUUCGEIp7d4+6p+8DYbkm2jP7x/3i/paXVF6dopSI3zd/CEitrZN1rc4i85xWmmXlg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -979,8 +979,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  vite@8.3.7:
-    resolution: {integrity: sha512-oxh0dMxrayBr33ScJvvBJ2HBQ2jc1TBrXKR2NyL/MJ9WPuX19mN2DXWUmywKdyw5RFVQBo8hmtb2FMC0LHrnng==}
+  vite@8.3.8:
+    resolution: {integrity: sha512-LzOn3h9rG/0vhLdXrV4yJ4QFA9eEoqCl+Yx+kGJd7aB9w6nfNgVHKSYwLPZUHrz4ZGa+t+kXjV9itvcHDLQouA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -1107,14 +1107,14 @@ snapshots:
       hashery: 1.5.1
       keyv: 5.6.0
 
-  '@cardanvil/frame-kit@0.7.0(typescript@6.0.3)(vite@8.3.7(@types/node@24.19.2)(yaml@2.9.1))(zod@4.6.7)':
+  '@cardanvil/frame-kit@0.7.0(typescript@6.0.3)(vite@8.3.8(@types/node@24.19.2)(yaml@2.9.1))(zod@4.6.7)':
     dependencies:
       pngjs: 7.0.0
       yazl: 3.3.1
       zod: 4.6.7
     optionalDependencies:
       typescript: 6.0.3
-      vite: 8.3.7(@types/node@24.19.2)(yaml@2.9.1)
+      vite: 8.3.8(@types/node@24.19.2)(yaml@2.9.1)
 
   '@eslint-community/eslint-utils@4.10.1(eslint@10.14.0)':
     dependencies:
@@ -1237,7 +1237,7 @@ snapshots:
 
   '@rolldown/pluginutils@1.1.0': {}
 
-  '@trivago/prettier-plugin-sort-imports@6.0.2(prettier@3.9.10)':
+  '@trivago/prettier-plugin-sort-imports@6.0.2(prettier@3.10.1)':
     dependencies:
       '@babel/generator': 7.29.13
       '@babel/parser': 7.29.13
@@ -1247,7 +1247,7 @@ snapshots:
       lodash-es: 4.18.1
       minimatch: 9.0.9
       parse-imports-exports: 0.2.4
-      prettier: 3.9.10
+      prettier: 3.10.1
     transitivePeerDependencies:
       - supports-color
 
@@ -1668,7 +1668,7 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier@3.9.10: {}
+  prettier@3.10.1: {}
 
   punycode@2.3.1: {}
 
@@ -1743,7 +1743,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite@8.3.7(@types/node@24.19.2)(yaml@2.9.1):
+  vite@8.3.8(@types/node@24.19.2)(yaml@2.9.1):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
